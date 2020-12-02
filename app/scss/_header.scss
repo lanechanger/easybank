@@ -1,4 +1,9 @@
 .header {
+
+    nav {
+        padding: 24px;
+    }
+
     &__logo {
         img {}
     }
@@ -12,6 +17,9 @@
             height: 4px;
             background-color: darkBlue;
 
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
 
         }
     }

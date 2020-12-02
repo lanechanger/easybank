@@ -28,8 +28,12 @@ body {
   justify-content: center;
 }
 
-.flex-ac-c {
+.flex-ai-c {
   align-items: center;
+}
+
+.header nav {
+  padding: 24px;
 }
 
 .header__menu > span {
@@ -37,5 +41,9 @@ body {
   width: 26px;
   height: 4px;
   background-color: darkBlue;
+}
+
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
 }
 /*# sourceMappingURL=style.css.map */
