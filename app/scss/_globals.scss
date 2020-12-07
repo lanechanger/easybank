@@ -46,7 +46,7 @@ a:hover {
 // Buttons
 button,
 .button {
-    padding: 1rem 1.875rem;
+    padding: 0.875rem 2.1875rem;
     background: linear-gradient(to right, $limeGreen, $brightCyan);
     border: 0;
     border-radius: 50px;
@@ -54,12 +54,17 @@ button,
     color: $white;
     font-family: 'Public Sans', sans-serif;
     font-weight: 400;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
 }
 
 // visibility
 .hide-for-mobile {
 
-    // hide for tablet and mobile
+    // hide desktop only items for tablet and mobile
     @include breakpoint-down(medium) {
         display: none;
     }
@@ -67,7 +72,7 @@ button,
 
 .hide-for-desktop {
 
-    // hide for desktop viewport widths
+    // hide mobile only items for desktop viewport widths
     @include breakpoint-up(large) {
         display: none;
     }
