@@ -2,6 +2,10 @@
 
     // Hamburger Open Styles
     &.open {
+        .overlay {
+            display: block;
+        }
+
         .header__menu {
             >span:first-child {
                 transform: rotate(45deg);
@@ -18,13 +22,15 @@
     }
 
     .overlay {
-        display: none;
+        //display: none;
+        opacity: 0;
         position: fixed;
         top: 3.75rem;
         right: 0px;
         bottom: 0px;
         left: 0px;
         background-image: linear-gradient($darkBlue, transparent);
+
     }
 
     nav {
