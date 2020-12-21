@@ -140,6 +140,13 @@ a:hover {
   padding-bottom: 4.375rem;
 }
 
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
 .container--px {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -156,11 +163,11 @@ a:hover {
 }
 
 .container--pr {
-  padding-right: 4.375rem;
+  padding-right: 1.5rem;
 }
 
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
 }
 
 @media (min-width: 64em) {
@@ -191,6 +198,7 @@ a:hover {
 
 button,
 .button {
+  position: relative;
   display: inline-block;
   padding: 0.875rem 2.1875rem;
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
@@ -202,6 +210,25 @@ button,
   font-weight: 400;
   font-size: 0.875rem;
   transition: opacity 300ms ease-in-out;
+  overflow: hidden;
+}
+
+button::before,
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+button:hover::before,
+.button:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 63.9375em) {
@@ -216,8 +243,9 @@ button,
   }
 }
 
-.header.open .overlay {
-  display: block;
+.header {
+  position: relative;
+  z-index: 1;
 }
 
 .header.open .header__toggle > span:first-child {
@@ -568,6 +596,11 @@ button,
   line-height: 1.2;
   color: #2d314d;
   margin-bottom: 0.5rem;
+  transition: color 150ms ease-in-out;
+}
+
+.article__title:hover {
+  color: #31d35c;
 }
 
 .article__description {

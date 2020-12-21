@@ -1,10 +1,12 @@
 .header {
+    position: relative;
+    z-index: 1;
 
     // Hamburger Open Styles
     &.open {
-        .overlay {
-            display: block;
-        }
+        // .overlay {
+        //     display: block;
+        // }
 
         .header__toggle {
             >span:first-child {
